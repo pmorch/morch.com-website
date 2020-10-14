@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://morch-com.netlify.app"
 languageCode = "en-us"
 title = "Peter V. Mørch's Blog"
 theme = "ananke"
