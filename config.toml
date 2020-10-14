@@ -1,4 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "morch.com - ravings of Peter Mørch"
+title = "Peter V. Mørch's Blog"
 theme = "ananke"
+
+[params]
+    featured_image = "/images/hero.jpg"
