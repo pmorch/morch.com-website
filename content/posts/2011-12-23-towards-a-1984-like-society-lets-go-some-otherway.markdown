@@ -16,12 +16,12 @@ Yeah, right. Now I ask you, dear reader: How long do you think it'll be before t
 
 
 
-	  * Illegal parking
-	  * Speeding
-	  * People collecting social benefits they shouldn't be collecting (Danish: "Sociale Bedragere")
-	  * People they want to check up on and keep track of, just for good measure.
-	  * Continuously monitor who associates with conspicuous people, a.k.a before-mentioned pedophile nazi-terrorists.
-	  * Keeping lists of who participated in which public demonstrations, just for good measure.
+* Illegal parking
+* Speeding
+* People collecting social benefits they shouldn't be collecting (Danish: "Sociale Bedragere")
+* People they want to check up on and keep track of, just for good measure.
+* Continuously monitor who associates with conspicuous people, a.k.a before-mentioned pedophile nazi-terrorists.
+* Keeping lists of who participated in which public demonstrations, just for good measure.
 
 And how long before the tabloid press start revealing that reality-star du-jour has spent the night at another reality-star du-jour?
 
