@@ -7,3 +7,14 @@
 figure.auto-width img {
     width: auto;
 }
+
+/*
+    Or use this:
+
+    ![Alt text](image.jpg#auto-width)
+
+    Thanks to https://discourse.gohugo.io/t/handling-images-size-aligning/1940/2
+*/
+img[src$='#auto-width'] {
+    width: auto !important;
+}
