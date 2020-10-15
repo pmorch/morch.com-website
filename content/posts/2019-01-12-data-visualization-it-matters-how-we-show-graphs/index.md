@@ -7,18 +7,17 @@ type: post
 url: /2019/01/12/data-visualization-it-matters-how-we-show-graphs/
 categories:
 - Technology
-featured_image: http://www.morch.com/wp-content/uploads/2019/01/horizontalStats.png
+featured_image: horizontalStats.png
 ---
 
 Should we show graphs using horizontal lines like this:
 
-[![](http://www.morch.com/wp-content/uploads/2019/01/horizontalStats.png)
-](http://www.morch.com/wp-content/uploads/2019/01/horizontalStats.png)
+![Horizontal Stats](horizontalStats.png)
 
 Or using "slanted" lines like this? :
 
-[![](http://www.morch.com/wp-content/uploads/2019/01/slantedStats.png)
-](http://www.morch.com/wp-content/uploads/2019/01/slantedStats.png)
+![Slanted Stats](slantedStats.png)
+
 <!-- more -->
 
 Notice that these two graphs actually are showing the same data, just differently.

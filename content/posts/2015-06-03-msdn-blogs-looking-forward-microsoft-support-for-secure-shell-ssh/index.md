@@ -7,8 +7,12 @@ type: post
 url: /2015/06/03/msdn-blogs-looking-forward-microsoft-support-for-secure-shell-ssh/
 categories:
 - Technology
+featured_image: powershell.jpg
 ---
 
-[![powershell](http://www.morch.com/wp-content/uploads/2015/06/powershell.jpeg)
-](http://www.morch.com/wp-content/uploads/2015/06/powershell.jpeg)Fantastic news! MS Windows will support SSH both as client and server. This is superb! "... and there’re not exact days yet. However the PowerShell team will provide details in the near future on availability dates."
+<!-- HUGO: Using figure shortcode -->
+{{<figure src="powershell.jpg" alt="Powershell screenshot" class="auto-width">}}
+
+
+Fantastic news! MS Windows will support SSH both as client and server. This is superb! "... and there’re not exact days yet. However the PowerShell team will provide details in the near future on availability dates."
 Source: _[MSDN Blogs](http://blogs.msdn.com/b/powershell/archive/2015/06/03/looking-forward-microsoft-support-for-secure-shell-ssh.aspx)_
