@@ -11,7 +11,6 @@ categories:
 
 I've written [before](/2011/07/05/forwarding-snmp-ports-over-ssh-using-socat/) about how to access SNMP agents (or other TCP or UDP services) in a network when you only have SSH access. Running a SSH VPN and then running IP Masquerading (NAT) in the remote end is _the_ solution for me so far. Here is how it is done.
 
-
 ![](sshVPN1.png)
 
 <!-- more -->
