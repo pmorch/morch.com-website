@@ -9,7 +9,8 @@ categories:
 - Technology
 ---
 
-![](http://www.morch.com/wp-content/uploads/2011/09/opensourceNSA.png)
+![](opensourceNSA.png)
+
 [NSA proposes Accumulo NoSQL database to Apache](http://wiki.apache.org/incubator/AccumuloProposal), writes [The H](http://www.h-online.com/open/news/item/NSA-proposes-Accumulo-NoSQL-database-to-Apache-1336623.html).
 
 This is a big deal (at least in my book) because it demonstrates that the NSA does not believe in [security by obscurity](http://en.wikipedia.org/wiki/Security_through_obscurity).

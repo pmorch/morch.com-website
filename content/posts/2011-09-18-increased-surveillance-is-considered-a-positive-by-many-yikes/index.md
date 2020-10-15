@@ -8,10 +8,12 @@ url: /2011/09/18/increased-surveillance-is-considered-a-positive-by-many-yikes/
 categories:
 - Opinion
 - Technology
+featured_image: 1984.jpg
 ---
 
-[![](http://www.morch.com/wp-content/uploads/2011/09/1984.jpeg)
-](http://www.morch.com/wp-content/uploads/2011/09/1984.jpeg)Here in Denmark, we've just had an election, and the previous government has been replaced.
+![](1984.jpg)
+
+Here in Denmark, we've just had an election, and the previous government has been replaced.
 
 A [newspaper article [lang="da"]](http://sondagsavisen.dk/2011/37/her-er-danskernes-dom-over-vk.aspx) looks back at what people liked and disliked about what the previous government did.
 
