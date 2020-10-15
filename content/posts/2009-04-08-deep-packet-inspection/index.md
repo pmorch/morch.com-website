@@ -7,14 +7,12 @@ type: post
 url: /2009/04/08/deep-packet-inspection/
 categories:
 - Technology
+featured_image: deepPacketInspection.gif
 ---
-
-
 
 Deep packet inspection could be useful to ISPs who oversell  limited bandwidth to (too) many customers. With Deep Packet Inspection,  my ISP could inspect the contents and details of the high-bandwith traffic going to and from my  neighbor:
 
-[![](http://www.morch.com/wp-content/uploads/2009/04/deepPacketInspection.gif)
-](https://www.dpacket.org/articles/digging-deeper-deep-packet-inspection-dpi)
+[![](deepPacketInspection.gif)](https://www.dpacket.org/articles/digging-deeper-deep-packet-inspection-dpi)
 
 Our ISP could then determine most of it to be peer-2-peer traffic, and then limit  exactly that peer-2-peer traffic so that my neighbor ( :-) ) doesn't hog all  the bandwidth that we all have to share. On the surface, that sounds  like a great idea? Why should my neighbor ruin the internet experience  for the rest of us? There's a catch...
 

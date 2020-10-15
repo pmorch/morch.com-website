@@ -7,17 +7,15 @@ type: post
 url: /2011/02/15/power-depends-on-frame-of-reference/
 categories:
 - Technology
+featured_image: N1_Moon_Rocket_VEXEL_by_rogelead.jpg
 ---
-
-[![A rocket](http://www.morch.com/wp-content/uploads/2011/02/N1_Moon_Rocket_VEXEL_by_rogelead.jpg)
-](http://rogelead.deviantart.com/art/N1-Moon-Rocket-VEXEL-166023953)
 
 Imagine we're in a rocket.
 
 We have an imaginary engine, that provides a constant amount of thrust. How much power does such an engine provide? In essence the power depends linearly on the velocity:
 
-[![](http://latex.codecogs.com/gif.latex?\\ P = \frac{dW}{dt} \wedge W = \int F \cdot ds \Leftrightarrow \\ P = F \cdot \frac{ds}{dt} \Leftrightarrow \\ P = F \cdot v)
-](http://www.codecogs.com/eqnedit.php?latex=\\ P = \frac{dW}{dt} \wedge W = \int F \cdot ds \Leftrightarrow \\ P = F \cdot \frac{ds}{dt} \Leftrightarrow \\ P = F \cdot v)
+<!-- HUGO: specifics LaTeX -->
+[{{< figure src="https://latex.codecogs.com/gif.latex?%5C%5C%20P%20%3D%20%5Cfrac%7BdW%7D%7Bdt%7D%20%5Cwedge%20W%20%3D%20%5Cint%20F%20%5Ccdot%20ds%20%5CLeftrightarrow%20%5C%5C%20P%20%3D%20F%20%5Ccdot%20%5Cfrac%7Bds%7D%7Bdt%7D%20%5CLeftrightarrow%20%5C%5C%20P%20%3D%20F%20%5Ccdot%20v" class="auto-width" alt="Power calculation" >}}](https://www.codecogs.com/latex/eqneditor.php?latex=%5C%5C%20P%20=%20%5Cfrac%7BdW%7D%7Bdt%7D%20%5Cwedge%20W%20=%20%5Cint%20F%20%5Ccdot%20ds%20%5CLeftrightarrow%20%5C%5C%20P%20=%20F%20%5Ccdot%20%5Cfrac%7Bds%7D%7Bdt%7D%20%5CLeftrightarrow%20%5C%5C%20P%20=%20F%20%5Ccdot%20v)
 
 And the velocity depends (by definition) on the frame of reference.
 
@@ -35,9 +33,9 @@ So, have I then proved that it is impossible to create such an imaginary engine?
 
 Related to the above, we have the definition of kinetic energy:
 
-[![](http://latex.codecogs.com/png.latex?E_{kin} = \frac{1}{2} \cdot m \cdot v^{2 })
-](http://www.codecogs.com/eqnedit.php?latex=E_{kin} = \frac{1}{2} \cdot m \cdot v^{2 })
+<!-- HUGO: specifics LaTeX -->
+[{{< figure src="https://latex.codecogs.com/gif.latex?E_%7Bkin%7D%20%3D%20%5Cfrac%7B1%7D%7B2%7D%20%5Ccdot%20m%20%5Ccdot%20v%5E%7B2%20%7D" class="auto-width" alt="Kinetic Energy calculation" >}}](https://www.codecogs.com/latex/eqneditor.php?latex=%5C%5C%20P%20=%20%5Cfrac%7BdW%7D%7Bdt%7D%20%5Cwedge%20W%20=%20%5Cint%20F%20%5Ccdot%20ds%20%5CLeftrightarrow%20%5C%5C%20P%20=%20F%20%5Ccdot%20%5Cfrac%7Bds%7D%7Bdt%7D%20%5CLeftrightarrow%20%5C%5C%20P%20=%20F%20%5Ccdot%20v)
 
-Here again, we have that the energy depends on the frame of reference. Energy seems such a crucial cornerstone of physics, that I don't understand how it can depend on the frame of reference. When e.g. the energy content of fuel or batteries or whatever are absolutes values.
+Here again, we have that the energy depends on the frame of reference. Energy seems such a crucial cornerstone of physics, that I don't understand how it can depend on the frame of reference. When e.g. the energy content of fuel or batteries or whatever are absolute values.
 
 I've been toying with this for years, never taking it seriously, but I am perplexed. I was just trying to explore the characteristics that such an imaginary engine would have and I don't know what to make of it. Do you?
