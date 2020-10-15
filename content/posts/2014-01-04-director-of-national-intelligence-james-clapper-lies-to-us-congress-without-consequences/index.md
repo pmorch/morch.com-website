@@ -10,8 +10,7 @@ categories:
 - Technology
 ---
 
-[![James_R._Clapper_official_portrait](http://www.morch.com/wp-content/uploads/2014/01/James_R._Clapper_official_portrait.jpg)
-](http://www.morch.com/wp-content/uploads/2014/01/James_R._Clapper_official_portrait.jpg)
+![James_R._Clapper_official_portrait](James_R._Clapper_official_portrait.jpg)
 
 So, James Clapper, US Director of national Intelligence, lies to Congress. First he calls the lie the “least untruthful” answer he could publicly provide, and then cites a momentary memory failure. Seven congressmen take issue with James Clapper's testimony, but Obama administration unlikely to turn against director.
 
@@ -24,5 +23,3 @@ Initially I'm astounded, but after a while, I'm sadly less surprised.
 What kind of a message does that send?
 
 If guys like him lie willfully under oath, how does that say about their credibility when not under oath?
-
-

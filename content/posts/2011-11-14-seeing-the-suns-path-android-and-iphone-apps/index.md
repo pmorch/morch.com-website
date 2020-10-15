@@ -7,10 +7,13 @@ type: post
 url: /2011/11/14/seeing-the-suns-path-android-and-iphone-apps/
 categories:
 - Technology
+featured_image: sunSurveyorSmall.png
 ---
 
-[![](http://www.morch.com/wp-content/uploads/2011/11/sunSurveyorSmall.png)
-](http://www.sunsurveyor.com/wp-content/uploads/2011/07/ss12-cam3.png)I'd like to recommend an Android App for seeing the Sun's path in Augmented Reality (AR): [Sun Surveyor](http://www.sunsurveyor.com/). There is also [Sun Seeker](http://ajnaware.wordpress.com/2009/10/06/sun-seeker-seeing-the-light-with-augmented-reality/#comment-584) for iPhone/iOS, which I haven't tried since I don't have an iPhone.
+<!-- HUGO: Using figure shortcode -->
+{{< figure src="sunSurveyorSmall.png" class="auto-width">}}
+
+I'd like to recommend an Android App for seeing the Sun's path in Augmented Reality (AR): [Sun Surveyor](http://www.sunsurveyor.com/). There is also [Sun Seeker](http://ajnaware.wordpress.com/2009/10/06/sun-seeker-seeing-the-light-with-augmented-reality/#comment-584) for iPhone/iOS, which I haven't tried since I don't have an iPhone.
 
 We're out looking for a house to buy, and for me getting the afternoon and evening sun on the terrace during summer is so incredibly important. This way, I don't have to take the real-estate agent's word for where the sun goes down in the summer and whether the trees will create shade on the terrace. I can check it myself. Über-cool!
 

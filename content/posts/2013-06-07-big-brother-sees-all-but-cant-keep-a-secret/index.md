@@ -7,10 +7,12 @@ type: post
 url: /2013/06/07/big-brother-sees-all-but-cant-keep-a-secret/
 categories:
 - Technology
+featured_image: 1984.jpg
 ---
 
-[![1984](http://www.morch.com/wp-content/uploads/2011/09/1984.jpeg)
-](http://www.morch.com/wp-content/uploads/2011/09/1984.jpeg)Two news items from this week have me quite uneasy.
+![1984](1984.jpg)
+
+Two news items from this week have me quite uneasy.
 
 The [NSA is basically listening in on every US citizen](https://supporters.eff.org/civicrm/mailing/view?reset=1&id=427). For the sake of argument, let me assume that they get _everything_. So far I don't think we're quite there yet here in Denmark.
 

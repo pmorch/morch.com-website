@@ -7,10 +7,12 @@ type: post
 url: /2011/12/23/towards-a-1984-like-society-lets-go-some-otherway/
 categories:
 - Opinion
+featured_image: gpsSurveillance.jpg
 ---
 
-[![](http://www.morch.com/wp-content/uploads/2011/12/gpsSurveillance.jpg)
-](http://www.morch.com/wp-content/uploads/2011/12/gpsSurveillance.jpg)So now here in Copenhagen, [apparently](http://politiken.dk/indland/ECE1486684/ny-gps-teknologi-overhaler-betalingsringen/) traffic experts are suggesting that instead of a congestion charge similar to [London's](http://en.wikipedia.org/wiki/London_congestion_charge), in the future we should have a GPS receiver in our cars that transmits our position continuously to the tax authorities. And I'm sure that somebody (who won't be re-elected and who therefore can't be held accountable) will declare that this is for the sole purpose of [Congestion Charging](http://en.wikipedia.org/wiki/Congestion_pricing). And it wouldn't surprise me if it becomes the law.
+![](gpsSurveillance.jpg)
+
+So now here in Copenhagen, [apparently](http://politiken.dk/indland/ECE1486684/ny-gps-teknologi-overhaler-betalingsringen/) traffic experts are suggesting that instead of a congestion charge similar to [London's](http://en.wikipedia.org/wiki/London_congestion_charge), in the future we should have a GPS receiver in our cars that transmits our position continuously to the tax authorities. And I'm sure that somebody (who won't be re-elected and who therefore can't be held accountable) will declare that this is for the sole purpose of [Congestion Charging](http://en.wikipedia.org/wiki/Congestion_pricing). And it wouldn't surprise me if it becomes the law.
 
 Yeah, right. Now I ask you, dear reader: How long do you think it'll be before this is also used to find the mythical pedophile nazi-terrorists  too? I guess that's ok too, right? But how long before they dig in and allow this to be used by the police to find:
 

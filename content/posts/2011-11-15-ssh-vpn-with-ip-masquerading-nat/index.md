@@ -9,16 +9,14 @@ categories:
 - Technology
 ---
 
-I've written [before](http://www.morch.com/2011/07/05/forwarding-snmp-ports-over-ssh-using-socat/) about how to access SNMP agents (or other TCP or UDP services) in a network when you only have SSH access. Running a SSH VPN and then running IP Masquerading (NAT) in the remote end is _the_ solution for me so far. Here is how it is done.
+I've written [before](/2011/07/05/forwarding-snmp-ports-over-ssh-using-socat/) about how to access SNMP agents (or other TCP or UDP services) in a network when you only have SSH access. Running a SSH VPN and then running IP Masquerading (NAT) in the remote end is _the_ solution for me so far. Here is how it is done.
 
 
+![](sshVPN1.png)
 
+<!-- more -->
 
-![](http://www.morch.com/wp-content/uploads/2011/11/sshVPN1.png)
-
-
-
-<!-- more -->In the figure above, the Remote Server could be any TCP or UDP service in the remote network. My personal itch was to access SNMP agents in a remote network.
+In the figure above, the Remote Server could be any TCP or UDP service in the remote network. My personal itch was to access SNMP agents in a remote network.
 
 About 10.0.0.1 and 10.0.0.2: You'll need to choose a network that isn't being used in either side of the link. I've chosen the 10.0.0.0/24 network here but you can choose whatever makes sense to you. Just make sure it isn't already used on either side.
 
@@ -55,10 +53,10 @@ On the client:
 ifconfig on both client and server should show that you're up and running. Test it like this from the client:
 
     
-    <span class="code">$ ping 10.0.0.2</span>
-    <span class="code">PING 10.0.0.2 (10.0.0.2) 56(84) bytes of data.</span>
-    <span class="code">64 bytes from 10.0.0.2: icmp_req=1 ttl=64 time=13.1 ms</span>
-    <span class="code">64 bytes from 10.0.0.2: icmp_req=2 ttl=64 time=13.7 ms</span>
+    $ ping 10.0.0.2
+    PING 10.0.0.2 (10.0.0.2) 56(84) bytes of data.
+    64 bytes from 10.0.0.2: icmp_req=1 ttl=64 time=13.1 ms
+    64 bytes from 10.0.0.2: icmp_req=2 ttl=64 time=13.7 ms
     .....
 
 
@@ -118,8 +116,8 @@ I found all my information in man pages and here:
 
 
 
-	  * [SSH_VPN - Community Ubuntu Documentation](https://help.ubuntu.com/community/SSH_VPN)
-	  * [NAT with Linux and iptables - Tutorial (Introduction)](http://www.nardol.org/2009/1/12/quick-and-dirty-vpn-with-pppd-and-ssh)
-	  * [Nardol: Quick and Dirty VPN with pppd and ssh](http://www.nardol.org/2009/1/12/quick-and-dirty-vpn-with-pppd-and-ssh)
+* [SSH_VPN - Community Ubuntu Documentation](https://help.ubuntu.com/community/SSH_VPN)
+* [NAT with Linux and iptables - Tutorial (Introduction)](http://www.nardol.org/2009/1/12/quick-and-dirty-vpn-with-pppd-and-ssh)
+* [Nardol: Quick and Dirty VPN with pppd and ssh](http://www.nardol.org/2009/1/12/quick-and-dirty-vpn-with-pppd-and-ssh)
 
 Last, I wish [sshuttle](https://github.com/apenwarr/sshuttle) would do the trick, but for UDP it doesn't quite do the job [yet](http://groups.google.com/group/sshuttle/browse_thread/thread/9a5ad7c8561f5641#) and requires a newer kernel.
