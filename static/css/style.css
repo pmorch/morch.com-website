@@ -1,0 +1,7 @@
+/*
+ * Use like this:
+ * {{< figure src="image.png" class="auto-width" alt="Alt text" >}}
+ */
+figure.auto-width img {
+    width: auto;
+}
