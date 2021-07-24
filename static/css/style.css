@@ -29,3 +29,14 @@ pre  code {
 pre, .pre {
     overflow: auto;
 }
+
+/*
+ * Too much vertical space at the bottom of the page
+ */
+div.mt6.instapaper_ignoref {
+    margin-top: 0;
+}
+
+main.pb7 {
+    padding-bottom: 0;
+}
