@@ -1,5 +1,5 @@
 ---
-author: peter
+author: Peter
 date: 2013-06-07 19:03:15+00:00
 draft: false
 title: Big Brother sees all but can't keep a secret?

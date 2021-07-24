@@ -1,5 +1,5 @@
 ---
-author: peter
+author: Peter
 date: 2008-11-29 13:24:28+00:00
 draft: false
 title: Church and State

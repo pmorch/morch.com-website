@@ -1,5 +1,5 @@
 ---
-author: peter
+author: Peter
 date: 2011-02-15 07:59:56+00:00
 draft: false
 title: 'Classical Mechanics: Why does Power depend on frame of reference?'

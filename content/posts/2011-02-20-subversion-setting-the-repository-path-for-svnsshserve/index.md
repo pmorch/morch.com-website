@@ -1,5 +1,5 @@
 ---
-author: peter
+author: Peter
 date: 2011-02-20 22:09:42+00:00
 draft: false
 title: 'Subversion: Setting the repository path for svn+ssh://server/repos'

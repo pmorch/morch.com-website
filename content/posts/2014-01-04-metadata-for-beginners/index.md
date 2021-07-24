@@ -1,5 +1,5 @@
 ---
-author: peter
+author: Peter
 date: 2014-01-04 15:39:54+00:00
 draft: false
 title: Metadata for beginners

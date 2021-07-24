@@ -1,5 +1,5 @@
 ---
-author: peter
+author: Peter
 date: 2009-02-09 00:00:51+00:00
 draft: false
 title: Documentation, Git and MediaWiki

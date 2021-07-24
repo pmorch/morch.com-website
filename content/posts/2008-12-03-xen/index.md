@@ -1,5 +1,5 @@
 ---
-author: peter
+author: Peter
 date: 2008-12-03 00:00:54+00:00
 draft: false
 title: Xen?

@@ -1,5 +1,5 @@
 ---
-author: peter
+author: Peter
 date: 2011-07-13 06:52:08+00:00
 draft: false
 title: Natural Sort

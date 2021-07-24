@@ -1,5 +1,5 @@
 ---
-author: peter
+author: Peter
 date: 2014-01-04 15:33:30+00:00
 draft: false
 title: UN votes to protect privacy in digital age - Hurray!

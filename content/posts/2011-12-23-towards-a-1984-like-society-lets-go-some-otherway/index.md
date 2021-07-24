@@ -1,5 +1,5 @@
 ---
-author: peter
+author: Peter
 date: 2011-12-23 05:29:26+00:00
 draft: false
 title: 'Towards a 1984-like society: Lets go some other way!'

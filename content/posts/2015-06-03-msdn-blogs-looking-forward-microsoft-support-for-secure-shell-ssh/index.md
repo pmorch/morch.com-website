@@ -1,5 +1,5 @@
 ---
-author: peter
+author: Peter
 date: 2015-06-03 21:30:06+00:00
 draft: false
 title: 'MSDN Blogs: Looking Forward: Microsoft Support for Secure Shell (SSH)'

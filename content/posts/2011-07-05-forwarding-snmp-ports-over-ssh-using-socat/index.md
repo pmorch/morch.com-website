@@ -1,5 +1,5 @@
 ---
-author: peter
+author: Peter
 date: 2011-07-05 04:32:34+00:00
 draft: false
 title: Forwarding SNMP ports over SSH using socat

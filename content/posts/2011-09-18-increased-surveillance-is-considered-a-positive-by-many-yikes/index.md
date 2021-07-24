@@ -1,5 +1,5 @@
 ---
-author: peter
+author: Peter
 date: 2011-09-18 18:24:23+00:00
 draft: false
 title: Increased surveillance is considered a positive by many? Yikes...

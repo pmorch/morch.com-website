@@ -1,5 +1,5 @@
 ---
-author: peter
+author: Peter
 date: 2019-01-12 12:19:47+00:00
 draft: false
 title: 'Data Visualization: It Matters How we Show Graphs'

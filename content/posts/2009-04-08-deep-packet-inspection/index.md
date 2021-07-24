@@ -1,5 +1,5 @@
 ---
-author: peter
+author: Peter
 date: 2009-04-08 00:00:03+00:00
 draft: false
 title: Deep Packet Inspection? Yup, bring it on!

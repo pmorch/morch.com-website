@@ -1,5 +1,5 @@
 ---
-author: peter
+author: Peter
 date: 2021-07-24 04:30:00+00:00
 draft: false
 title: "How to use Mathjax in Hugo"

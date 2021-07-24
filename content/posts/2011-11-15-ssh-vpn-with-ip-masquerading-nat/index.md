@@ -1,5 +1,5 @@
 ---
-author: peter
+author: Peter
 date: 2011-11-15 22:36:12+00:00
 draft: false
 title: SSH VPN with IP Masquerading (NAT)
