@@ -112,3 +112,5 @@ As you can see, using shortcodes also works around the issue of needing to add
 two backslashes before punctuation characters such as `(` and `[`.
 
 You now have Mathjax in Hugo without FOUC.
+
+This post is also shown in [mathjax - How to use markdown syntax to write math in Hugo? - Stack Overflow](https://stackoverflow.com/questions/64050359/how-to-use-markdown-syntax-to-write-math-in-hugo/68507248#68507248) and [Getting rid of the Flash of Unstyled Content? · Issue #131 · mathjax/MathJax](https://github.com/mathjax/MathJax/issues/131)
