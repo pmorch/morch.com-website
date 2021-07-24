@@ -18,3 +18,14 @@ figure.auto-width img {
 img[src$='#auto-width'] {
     width: auto !important;
 }
+
+/*
+ * pre > code (```) sections had too high lines and always scrollbars
+ */
+pre  code {
+    line-height: 1.25;
+}
+
+pre, .pre {
+    overflow: auto;
+}
