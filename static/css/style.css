@@ -40,3 +40,16 @@ div.mt6.instapaper_ignoref {
 main.pb7 {
     padding-bottom: 0;
 }
+
+/*
+ * TOC: Even the first level will get 80% less, so make the whole thing
+ * 1/80% == 125% so the first level will effectively be 100%
+ */
+#TableOfContents {
+    font-size: 125%;
+}
+
+#TableOfContents ul {
+    font-size: 80%;
+}
+
