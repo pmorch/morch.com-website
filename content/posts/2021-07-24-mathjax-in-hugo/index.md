@@ -29,6 +29,26 @@ Raw Mathjax block:
 $$a_4 \ne b_4$$
 ```
 
+Keep in mind though that according to the [commonmark
+spec](https://spec.commonmark.org/0.30/#backslash-escapes) (which Hugo follows
+since it uses [goldmark](https://github.com/yuin/goldmark) internally), you
+need to add two backslashes before punctuation characters such as `(` and `[`.
+So:
+
+```
+This shows as Mathjax \\(a \ne b\\), but this doesn't \(a \ne b\)
+
+Likewise, this shows as Mathjax
+
+\\[a \ne b\\]
+
+but this doesn't:
+
+\[a \ne b\]
+```
+
+Of course you can avoid that by using `$$ TeX Source $$`.
+
 You can stop here.
 
 But I went a step further, because I didn't like how Mathjax gives you a flash
@@ -87,5 +107,8 @@ Mathjax block:
 Inline shortcode {{</* mathjax/inline */>}}\(a \ne 0\){{</* /mathjax/inline
 */>}} with Mathjax.
 ```
+
+As you can see, using shortcodes also works around the issue of needing to add
+two backslashes before punctuation characters such as `(` and `[`.
 
 You now have Mathjax in Hugo without FOUC.
