@@ -8,25 +8,48 @@ menu: main
 toc: true
 ---
 
-# Running Hugo
+## Running Hugo
 
 To run hugo:
 
-    HUGO_ENV=production hugo
+```bash
+HUGO_ENV=production hugo
+```
 
 (see `themes/ananke/README.md` for `HUGO_ENV`)
 
 To run hugo while developing (`-D` means include drafts):
 
-    hugo server -D
+```bash
+hugo server -D
+```
 
 To run hugo while developing in WSL2:
 
-    hugo server -D --bind 0.0.0.0 -b http://ubuntu-wsl2
+```bash
+hugo server -D --bind 0.0.0.0 -b http://ubuntu-wsl2
+```
 
-# Any Non-standard Markdown
+## Use `##` for `<h2>` as the "top" headings
 
-Use the comment:
+The page title uses a `<h1>`, and for SEO purposes, that should be the only `<h1>` on the page. See
+[Why does markup.tableOfContents.startLevel default to 2?](https://discourse.gohugo.io/t/why-does-markup-tableofcontents-startlevel-default-to-2/33963).
+
+## Table of Contents
+
+Add this to the article/post front matter to get a TOC:
+
+```toml
+toc: true
+type: post
+```
+
+The `type: post` may not be required, but seems to be required
+in `index.md` page front matter to get a TOC.
+
+## Any Non-standard Markdown
+
+Use the comment in the Markdown source:
 
 ```
 <!-- HUGO: some description -->
@@ -35,7 +58,7 @@ Use the comment:
 Then, if I ever need to move from Hugo to something else, I know I need to fix
 at least these specific things.
 
-# Mathjax
+## Mathjax
 
 See [How to use Mathjax in Hugo](/posts/2021-07-24-mathjax-in-hugo/), but short
 version:
@@ -50,17 +73,3 @@ Mathjax block:
 <!-- HUGO: mathjax -->
 Inline shortcode {{< mathjax/inline >}}\(a \ne 0\){{< /mathjax/inline >}} with
 Mathjax.
-
-# Table of Contents
-
-Add `toc: true` to the front matter. I don't know why, but by default, it
-starts at `##`/`<H2>` and below. I've modified that to be H1 and below with
-this in
-`config.toml`:
-
-
-    [markup]
-      [markup.tableOfContents]
-        startLevel = 1
-
-Add `type: post` to `index.md` page front matter to get a TOC.

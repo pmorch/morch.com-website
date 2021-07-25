@@ -9,16 +9,20 @@ type: post
 menu: main
 toc: true
 ---
-# Docker Security
+
+## HTTPS Proxy
+## Keycloak Forceuser?
+
+## Docker Security
 
 Passwords stored in .dotfiles?
 
-# Usability of Streaming
+## Usability of Streaming
 
 Split streaming into the content and the GUI. But the money is
 in the GUI.
 
-# Avoiding Git Merge Conflicts
+## Avoiding Git Merge Conflicts
 
 You are working on a branch and sooner or later, you need to merge with a main branch. And then you experience the nasty
 

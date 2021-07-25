@@ -6,7 +6,3 @@ theme = "ananke"
 [params]
     featured_image = "/images/hero.jpg"
     custom_css = ["css/style.css"]
-
-[markup]
-  [markup.tableOfContents]
-    startLevel = 1
