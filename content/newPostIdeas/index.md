@@ -41,3 +41,15 @@ Supporting links:
 * [LAPI](https://gitlab.lessor.dk/LAPI/api-core/-/blob/master/api-core/src/main/java/dk/lessor/api/core/servicelocator/ServiceLocatorImpl.java)
 * [ServiceLoader (Java Platform SE 7 )](https://docs.oracle.com/javase/7/docs/api/java/util/ServiceLoader.html)
 * [java - META-INF/services in JAR with Gradle - Stack Overflow](https://stackoverflow.com/questions/13254620/meta-inf-services-in-jar-with-gradle)
+
+## Installing a script with `brew` by creating a Formula
+
+Say we have a tiny script that we want to distribute with `brew`.
+
+We create a tarball with the script and create a formula file with a formula in
+it. It references the newly created tarball and its `sha256sum`.
+
+Discovering the name of the class (in "CamelCase") from the formula name (in
+"kebab-case") is somewhat straight-forward, but alas, is a [private
+method](https://rubydoc.brew.sh/Formulary.html#class_s-class_method). But not
+likely to change, honestly...
