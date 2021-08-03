@@ -24,10 +24,12 @@ To run hugo while developing (`-D` means include drafts):
 hugo server -D
 ```
 
-To run hugo while developing in WSL2:
+To run hugo while developing in WSL2, some ports are reserved. Try:
+
+    powershell.exe netsh int ip show excludedportrange protocol=tcp
 
 ```bash
-hugo server -D --bind 0.0.0.0 -b http://ubuntu-wsl2
+hugo server -D -p 13000
 ```
 
 ## Use `##` for `<h2>` as the "top" headings
