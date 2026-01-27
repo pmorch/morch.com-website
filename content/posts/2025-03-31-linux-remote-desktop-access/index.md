@@ -6,6 +6,9 @@ featured_image: "GNOME-Desktop-version-44.webp"
 description: "The different ways to access a Linux desktop remotely"
 ---
 
+Edited on 2026-01-26 after upgrading to NixOS 25.11 and GNOME 49, which don't
+support X11. Wayland is the only option from now on.
+
 ## TL;DR
 
 Here I compare Gnome Remote Desktop, RustDesk and `x11vnc`.
@@ -14,12 +17,16 @@ I ended up using Gnome Remote Desktop for "Desktop Saring", but not for "Remote
 Login" because it doesn't work without Network Manager, and I don't use Network
 Manager. Also, it doesn't allow logging into the physical desktop (see below).
 
-Instead, I use `x11vnc` for the initial logging in to the physical desktop,
-which requires GDM to run with wayland disabled and it is a little cumbersome.
+For "Remote Login", I'm using `ydotool` to send `<Enter>` and my password to login with GDM. Hacky, but it works.
+
+### Wayland disqualifies `x11vnc` and RustDesk
+
+The name almost implies it, but `x11vnc` that I've used for years now no longer
+works.
 
 While RustDesk seems to work fine, it requires a custom client and a self-hosted
 server (or using somebody else's server) and I'm not sure I trust it; a gut
-feeling, that could be wrong.
+feeling, that could be wrong. Also, under Wayland it doesn't allow me to log in with GDM. So it doesn't really buy me anything over Gnome Remote Desktop.
 
 ## Background
 
@@ -83,10 +90,10 @@ These are the solutions I've considered:
 
 * Gnome Remote Desktop: offering RDP access to a gnome desktop
 * RustDesk: The new kid on the block
-* x11vnc: The old trusted solution
+* x11vnc: The old trusted X11-only solution
 
-I've kicked the tires on all of them, and spoiler alert: I'll be using a
-combination of Gnome Remote Desktop and x11vnc. But I'll describe why.
+I've kicked the tires on all of them, and spoiler alert: I'll be using
+Gnome Remote Desktop.
 
 ### Gnome Remote Desktop: offering RDP access to a gnome desktop
 
@@ -111,7 +118,7 @@ brilliantly.
 another TCP port than "Desktop Sharing". When you connect with RDP, you see a
 virtual GDM login screen, and if you try to login as a user that is already
 logged in on the real desktop, you'll get an error. Otherwise, it will start a
-virtual desktop in that user's name. So it doesn't allow you to start the
+*virtual* desktop in that user's name. So it doesn't allow you to start the
 "physical" desktop.
 
 Together, one can use "Desktop Sharing" if the physical desktop has already been
@@ -148,15 +155,24 @@ credentials={'username': <'foo'>, 'password': <'bar'>}
 
 So in both cases stored as clear text. ☹️
 
+#### Logging in to GDM with `ydotool`
+
+[ReimuNotMoe/ydotool](https://github.com/ReimuNotMoe/ydotool) allows us to send
+keystrokes also to GDM, also under Wayland. So I've written a `gdm-login` script
+that checks that no desktop has been started yet, and that GDM is started. It
+then asks me for my password and sends first `<Enter>` and then after a pause
+sends my password. It then lets the user know if a desktop was started. If the
+desktop didn't get started, the password was likely wrong, try again.
+
 ### RustDesk: The new kid on the block
 
-Rustdesk seems to handle both the physical GDM login and accessing the physical desktop just fine.
+Rustdesk seems to handle both the physical GDM login under X11 and accessing the physical desktop just fine. But not the physical GDM login under Wayland. So I've stopped using RustDesk myself.
 
-I had difficulties getting RustDesk to work as a service in NixOS, but I finally
-[managed](https://www.reddit.com/r/rustdesk/comments/1jhn2pa/comment/mjbjrcv/).
-
-I'm self-hosting the [server
-part](https://rustdesk.com/docs/en/self-host/rustdesk-server-oss/docker/) so I'm
+But I had difficulties getting RustDesk to work as a service in NixOS, and I
+finally
+[managed](https://www.reddit.com/r/rustdesk/comments/1jhn2pa/comment/mjbjrcv/),
+so I'll leaving this information here. I was self-hosting the [server
+part](https://rustdesk.com/docs/en/self-host/rustdesk-server-oss/docker/) so was
 fully self-hosted also for rustdesk.
 
 I could not find any clear info about where/how rustdesk stores passwords, so
@@ -176,74 +192,7 @@ since version 1.2.0.
 ### `x11vnc`: The old trusted solution
 
 This only works for X11, and not for wayland. (Which is perhaps why Gnome Remote
-Desktop was created?)
-
-I log into the desktop machine with ssh and start `x11vnc` when I need it. This
-is a little cumbersome, but I never bothered creating services for this.
-
-#### GDM login
-
-Use this if the user has not yet logged in to the physical desktop. As it turns
-out, this is the only thing I ended up using `x11vnc` for in the end:
-
-##### One-time setup
-
-First make sure that wayland is disabled for GDM. This will make GDM itself use
-X11, and only allow you to start your desktop with X11.  Edit
-`/etc/gdm/custom.conf` and make sure it contains:
-
-```
-[daemon]
-WaylandEnable=false
-```
-(Without the comment character `#` in front of `WaylandEnable=false`).
-
-Reboot (or restart GDM) if you had to change `/etc/gdm/custom.conf`.
-
-Then create a `x11vnc` password for GDM. Usually `x11vnc` wants to store the
-password file in the user's home directory, but at least on NixOS, for the `gdm`
-user, that is `/run/gdm`, which is deleted completely on every reboot. Instead
-create the password file like this:
-
-```
-sudo mkdir /home/gdm
-sudo chown gdm: /home/gdm
-sudo chmod 0700 /home/gdm
-sudo -u gdm x11vnc -storepasswd /home/gdm/passwd
-Enter VNC password: <enter password>
-Verify password:    <enter password>
-Write password to /home/gdm/passwd?  [y]/n y
-Password written to: /home/gdm/passwd
-```
-
-##### Login with GDM
-
-Then, to view the the physical GDM login screen remotely, start `x11vnc` like this:
-
-```
-sudo -u gdm x11vnc -once -rfbauth /home/gdm/passwd \
-    -auth /run/user/$(id -u gdm)/gdm/Xauthority \
-    -display :0 -rfbport 5901
-```
-
-Now you can connect with `vnc` to port 5901, see GDM and login. Once you've
-logged in, the `vnc` screen will disappear and `x11vnc` will exit because of
-the `-once` option. It was just for the GDM login.
-
-#### See user's physical desktop
-
-Run this to see the logged in desktop (assuming you're logged in with ssh as the
-same user showing the desktop). Again, this only works if the desktop session is
-using X11 (and not Wayland):
-
-```
-x11vnc -usepw \
-    -auth /run/user/$(id -u)/gdm/Xauthority \
-    -display :1 -forever -rfbport 5901
-```
-
-(You may need to check whether the physical desktop uses `DISPLAY` `:0` or `:1`. Mine uses `:1`.)
-
+Desktop was created?) With it, I could both remote control GDM and the desktop.
 
 ## Summary
 
