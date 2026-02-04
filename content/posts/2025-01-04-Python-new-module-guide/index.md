@@ -15,192 +15,89 @@ use to setup a skeleton project.
 
 This doc came out of painfully learning these things one by one.
 
-# Actually, use `uv`
+# Use `uv`
 
-The problem/question is: One problem that keeps coming up is how to use `uv` with a venv other than `.venv`.
+[`uv`](https://docs.astral.sh/uv/) is an extremely fast Python package and
+project manager. It replaces `pip`, `pipx`, `venv`, and most of what you'd use
+`hatch` for. Install it following the [official
+instructions](https://docs.astral.sh/uv/getting-started/installation/).
 
-## Use `uv init --package my-package`
+## Creating a new project with `uv init --package`
 
-This sets up `pyproject.toml` with:
+Use `uv init --package my-package` to create a new project:
+
+```shell
+$ uv init --package todo
+$ cd todo
+$ tree
+.
+├── pyproject.toml
+├── README.md
+└── src
+    └── todo
+        └── __init__.py
+```
+
+This sets up `pyproject.toml` with hatchling as the build backend and a script
+entry point:
 
 ```toml
-...
-
 [project.scripts]
-my-package = "my_package:main"
+todo = "todo:main"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 ```
-Which then does the equivalent of `uv pip install -e .` and adds `.venv/lib/python3.13/site-packages/_my_package.pth` containing:
 
-```
-/path/to/my-package/src
-```
-
-So that these two work from any directory:
+Now you can run your package:
 
 ```shell
-# This imports the package "raw"
-$ uv run python -c 'import my_package'
-# This runs my_package.main() via project.scripts.my-package
-$ uv run my-package
+# Run a command in the project's virtual environment
+$ uv run python -c 'import todo'
+
+# Run the script entry point
+$ uv run todo
 ```
 
-## `uv` and venvs other than `.venv`
+`uv` automatically creates and manages the `.venv` virtual environment for you.
 
-I can create a virtual environment ("venv") other than `.venv` with:
+## Adding dependencies
 
 ```shell
-$ uv init
-$ uv venv other-venv
+# Add a runtime dependency
+$ uv add requests
+
+# Add a development dependency
+$ uv add --dev pytest ruff
 ```
 
-What is the intended/canonical way to use `uv` with such an alternate venv?
+## Installing CLI tools globally
 
-How can I get `uv add` and `uv sync` to use and update it?
-
-In some cases, `-p other-venv` works, such as here:
+Instead of `pipx`, use `uv tool install`:
 
 ```shell
-$ uv pip install  -p other-venv numpy
-Using Python 3.13.2 environment at other-venv
-Resolved 1 package in 3ms
-Installed 1 package in 11ms
- + numpy==2.2.6
-
-$ ls -ld other-venv/lib/python3.13/site-packages/numpy
-drwxr-xr-x 1 peter peter 1076 May 25 19:06 other-venv/lib/python3.13/site-packages/numpy
+$ uv tool install ruff
+$ uv tool install httpie
 ```
 
-But it doesn't work here:
-
-```shell
-$ uv add -p other-venv pause
-Using CPython 3.13.2 interpreter at: other-venv/bin/python3
-Creating virtual environment at: .venv
-Resolved 2 packages in 32ms
-Installed 1 package in 0.42ms
- + pause==0.3
-
-$ ls -ld other-venv/lib/python3.13/site-packages/pause
-ls: cannot access 'other-venv/lib/python3.13/site-packages/pause': No such file or directory
-
-$ ls -ld .venv/lib/python3.13/site-packages/pause
-drwxr-xr-x 1 peter peter 32 May 25 19:07 .venv/lib/python3.13/site-packages/pause
-```
-
-or here:
-
-```shell
-$ uv sync -p other-venv
-Using CPython 3.13.2 interpreter at: other-venv/bin/python3
-Removed virtual environment at: .venv
-Creating virtual environment at: .venv
-Resolved 2 packages in 0.58ms
-Installed 1 package in 0.54ms
- + pause==0.3
-```
-
-What does seem to work in every case is:
-
-```shell
-$ UV_PROJECT_ENVIRONMENT=other-venv uv sync
-Resolved 2 packages in 0.53ms
-Uninstalled 1 package in 9ms
-Installed 1 package in 0.51ms
- - numpy==2.2.6
- + pause==0.3
-
-$ ls -ld other-venv/lib/python3.13/site-packages/pause
-drwxr-xr-x 1 peter peter 32 May 25 19:10 other-venv/lib/python3.13/site-packages/pause
-```
-
-# Use `pipx`
-
-`pipx` allows you to install python-based executables without needing root and
-without directly using virtual environments (`venv`s). Go ahead and install it
-using your standard package manager (e.g. `apt`, `yum, brew` or whatever is
-great for your system.
-
-Then add `~/.local/bin` to your path if it isn't already.
-
-# Use `hatch`
-
-Hatchling is the recommended way to package your lib or app. You might as well
-get started properly, so install hatch that helps you setup hatch projects.
-Hatch is oddly not mentioned in [Packaging Python Projects - Python Packaging
-User
-Guide](https://packaging.python.org/en/latest/tutorials/packaging-projects/),
-but I've found `hatch` to be the [path of least
-resistance](https://stackoverflow.com/questions/79232116/) for developing and
-setting up `PYTHONPATH`, `venvs` and the like.
-
-I used `pipx install hatch` (from above) to install it.
-
-Use hatch to create the new project boilerplate. I'll be creating my version of
-the ubiquitous `todo` project:
-
-```shell
-$ hatch new todo ./todo
-todo
-├── src
-│   └── todo
-│       ├── __about__.py
-│       └── __init__.py
-├── tests
-│   └── __init__.py
-├── LICENSE.txt
-├── README.md
-└── pyproject.toml
-```
-
-It sets up some boilerplate. Go ahead edit the generated files, at least changing your name.
-
-But now the `todo` module has been created for you. You can:
-
-```shell
-$ hatch shell
-(temp) $ python3 -c 'import todo'
-(temp) $ exit
-```
-
-and this works too:
-
-```
-$ hatch run python3 -c 'import todo'
-```
+This installs tools in isolated environments and makes them available globally.
 
 ## Test utilities
 
-This took me a while to figure out: The presence of `tests/__init__.py` makes `tests` a module in its own right. So you can create a `tests/config_reader.py` support utility and then use it from `tests/mytest.py` as:
+The presence of `tests/__init__.py` makes `tests` a module in its own right. So
+you can create a `tests/config_reader.py` support utility and then use it from
+`tests/mytest.py` as:
 
 ```python
 from . import config_reader
-from todo import todo_feature
+from todo import some_feature
 
 # use it
-config.reader.read(whatever)
+config_reader.read(...)
 ```
 
 This is handy for common functionality across multiple tests.
-
-# Use `venvs` when not using `hatch`
-
-Don't ever use `sudo pip install whatever`.
-
-`hatch` and `pipx` are your friends. But if I want to try out something in a
-temporary environment, I use:
-
-```shell
-$ python3 -m venv ./tempdir
-$ ./tempdir/bin/pip3 install /path/to/todo
-$ ./tempdir/bin/pip3 install some-other-package
-$ ./tempdir/bin/python3 ...
-```
-
-This allows me to later `rm -rf tempdir` without having polluted my system.
 
 # Use `xdg_base_dirs` for common directories
 
@@ -306,4 +203,11 @@ print(obj)
 # Other topics
 
 - Use a logger and not `print()`
-- Use `black`, `isort`, `autoflake` to keep code tidy
+- Use [`ruff`](https://docs.astral.sh/ruff/) for linting and formatting - it
+  replaces `black`, `isort`, `flake8`, `autoflake`, and many others in a single,
+  fast tool:
+  ```shell
+  $ uv add --dev ruff
+  $ uv run ruff check --fix  # lint and auto-fix
+  $ uv run ruff format       # format code
+  ```
