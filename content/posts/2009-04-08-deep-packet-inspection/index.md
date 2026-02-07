@@ -29,7 +29,7 @@ My prediction is, though, that if Deep Packet Inspection were to become common, 
 So I come to a conclusion:
 
 
-<blockquote>If Deep Packet Inspection becomes widespread, the  consequence will be that encryption becomes equally widespread, making  the internet a safer place for all of us!</blockquote>
+> If Deep Packet Inspection becomes widespread, the  consequence will be that encryption becomes equally widespread, making  the internet a safer place for all of us!
 
 
 Deep Packet Inspection leads to Encryption which would also make it  impossible for the government to snoop anybody's emails and have many  other benefits. Wonderful. So bring it on!
