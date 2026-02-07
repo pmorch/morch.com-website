@@ -42,6 +42,51 @@ main.pb7 {
 }
 
 /*
+ * Print styles: hide site chrome and tighten spacing
+ * ananke-specific
+ */
+@media print {
+    /* Hide site header/nav and footer */
+    body > header, body > footer {
+        display: none !important;
+    }
+    /* Shrink the post title */
+    h1.f1 {
+        font-size: 1.75rem !important;
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+    /* Reduce spacing around date */
+    time.f6 {
+        margin-top: 0.25rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+    /* Hide "POSTS" section label */
+    aside.instapaper_ignoref {
+        display: none !important;
+    }
+    /* Remove padding on body and main */
+    body {
+        margin: 0 !important;
+    }
+    main.pb7 {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    article.flex-l {
+        margin-top: 0 !important;
+        padding: 0 !important;
+    }
+    article header.mt4 {
+        margin-top: 0 !important;
+    }
+    /* Tighten line spacing in content */
+    .nested-copy-line-height {
+        font-size: 0.9rem !important;
+    }
+}
+
+/*
  * TOC: Even the first level will get 80% less, so make the whole thing
  * 1/80% == 125% so the first level will effectively be 100%
  */
