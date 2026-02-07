@@ -10,28 +10,13 @@ categories:
 ---
 
 Why doesn't every programming language have "Natural Sorting" built in, out of the box? Natural sorting is the way humans sort, where number substrings are sorted numerically, everything else alphabetically:
-<table >
 
-<tr >
-Sorted "[Asciibetically](http://weblog.masukomi.org/2007/12/10/alphabetical-asciibetical)" (normal computer sort)
-Sorted "Naturally" (what humans prefer)
-</tr>
+| Sorted "[Asciibetically](http://weblog.masukomi.org/2007/12/10/alphabetical-asciibetical)" (normal computer sort) | Sorted "Naturally" (what humans prefer) |
+|---|---|
+| foo1bar | foo1bar |
+| foo10bar | foo2bar |
+| foo2bar | foo10bar |
 
-<tbody >
-<tr >
-
-<td >foo1bar
-foo10bar
-foo2bar
-</td>
-
-<td >foo1bar
-foo2bar
-foo10bar
-</td>
-</tr>
-</tbody>
-</table>
 Notice how 10 comes before 2 in [asciibetical](http://weblog.masukomi.org/2007/12/10/alphabetical-asciibetical) "normal computer sorting" ? Haven't we all seen user interfaces that like that? Its just plain _wrong_. :-(
 
 [Dave Koelle's Alphanum Algorithm](http://www.davekoelle.com/alphanum.html) sorts naturally, but instead of analyzing each array element O(log(N)) times, I [present a modified Perl version](https://github.com/pmorch/natsort) that allows for [Schwartzian transforms](http://en.wikipedia.org/wiki/Schwartzian_transform), yielding huge performance improvements.
