@@ -89,7 +89,7 @@ Now since it is MediaWiki markup, it would be possible to make the  documentatio
 ### HTML / DocBook
 
 
-Of course we could just choose to write the documentation in HTML,  but that is too cumbersome and too XML-ish to write in a text editor in  my opinion. The actual contents of the document are lost on the writer  as he is immersed in <tags/>.
+Of course we could just choose to write the documentation in HTML,  but that is too cumbersome and too XML-ish to write in a text editor in  my opinion. The actual contents of the document are lost on the writer  as he is immersed in `<tags/>`.
 
 DocBook has the same disadvantages as HTML, but the advantage that it  can be exported to so many formats, but it is also cumbersome to write  without the aid of an application for at least completion of the valid  tags and attributes. (Disclaimer: I don't have any actual experience  with DocBook.)
 
