@@ -16,7 +16,7 @@ featured_image: no-pdf1.png
 
 Honestly, I don't understand how somebody can prefer PDF to HTML for on-screen viewing. Really? That is possible? If you're one of them, can you help me understand?
 
-<!-- more -->There is no doubt that PDF is superior, if you're going to _print_ the document, but if you're going to _read it on-screen_, I don't even know where to begin listing why PDF sucks. But I'll try. My top gripes are:
+<!--more-->There is no doubt that PDF is superior, if you're going to _print_ the document, but if you're going to _read it on-screen_, I don't even know where to begin listing why PDF sucks. But I'll try. My top gripes are:
 
 
 

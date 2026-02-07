@@ -11,7 +11,7 @@ categories:
 
 
 
-I have a dream. I want to write structured documentation and  source code together in my text editor and version control both together  with [git](http://git-scm.com/), just like the source code. But have it be searchable, viewable and ideally editable within MediaWiki. Is this possible?<!-- more -->
+I have a dream. I want to write structured documentation and  source code together in my text editor and version control both together  with [git](http://git-scm.com/), just like the source code. But have it be searchable, viewable and ideally editable within MediaWiki. Is this possible?<!--more-->
 
 
 ## Requirements

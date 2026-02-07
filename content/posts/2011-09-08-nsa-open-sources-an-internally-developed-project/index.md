@@ -15,6 +15,6 @@ categories:
 
 This is a big deal (at least in my book) because it demonstrates that the NSA does not believe in [security by obscurity](http://en.wikipedia.org/wiki/Security_through_obscurity).
 
-<!-- more -->
+<!--more-->
 
 It is a common misconception that open source is inherently less secure than commercial or closed source software, exactly because hackers supposedly can't inspect the code to find weaknesses. The flip side is, of course, that you also have fewer white-hat eyeballs looking to find, report and fix weaknesses. Apparently, the NSA aggrees!

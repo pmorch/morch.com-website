@@ -16,7 +16,7 @@ We'll forward the SNMP traffic in a TCP port like this, with "socat" doing the U
 
 ![](snmpPortForward.png)
 
-<!-- more -->
+<!--more-->
 
 One could use netcat, and that works as long as the SNMP client uses the same source port. But it changes source port eventually, trust me! :-)
 

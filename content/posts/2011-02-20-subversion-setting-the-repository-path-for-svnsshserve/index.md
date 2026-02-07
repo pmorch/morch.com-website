@@ -14,7 +14,7 @@ For some reason, it doesn't seem to be possible to set up a path for your reposi
 
 But it really isn't that hard to do. Here is how I do it. Beware that you're going to be making system-wide changes to how svnserve operates. The basic idea is to replace svnserve with our own version, that calls the original one with a -r parameter.
 
-<!-- more -->
+<!--more-->
 
 As in:
 

@@ -18,7 +18,7 @@ Or using "slanted" lines like this? :
 
 ![Slanted Stats](slantedStats.png)
 
-<!-- more -->
+<!--more-->
 
 Notice that these two graphs actually are showing the same data, just differently.
 

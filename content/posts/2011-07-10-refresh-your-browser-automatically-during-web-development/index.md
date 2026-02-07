@@ -17,7 +17,7 @@ Did you ever find that while editing files for the web (e.g. HTML, Javascript, J
 
 Well, now you can! I've developed a pair of tools for that allow this when used in concert. Both are Open Source, of course.
 
-<!-- more -->
+<!--more-->
 
 1. A "monitorfiles" tool ([github](https://github.com/pmorch/monitorfiles)) that can execute any command when a monitored file changes
 2. A "Remote Control" Firefox extension ([addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/remote-control/)) ([github](https://github.com/pmorch/FF-Remote-Control)) that listens to events from "monitorfiles" to refresh the browser when any such files change.

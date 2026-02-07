@@ -15,7 +15,7 @@ I love watches.
 
 Being a techie, I really can't accept a watch that isn't accurate. The accuracy of a quartz-crystal based watch is the minimum. I wish I could get a Rolex, Omega or other really nice looking watch, but I just can't accept the accuracy I'll get from a watch like that. So all the beautiful Swiss watches are out for me. But there are alternatives:
 
-<!-- more -->
+<!--more-->
 
 I have a [Certina DS-Action ](http://www.certina.com/Collection/Gent-Quartz-Collection/DS-Action.aspx?m=1) quartz watch (shown right) and a [Casio PRW 2000T](https://www.google.com/search?hl=en&safe=off&client=ubuntu&hs=FsW&channel=fs&q=prw+2000t&bav=on.2,or.r_gc.r_pw.r_cp.r_qf.,cf.osb&biw=1421&bih=867&um=1&ie=UTF-8&tbm=isch&source=og&sa=N&tab=wi&ei=KbaZT7PzG8n64QTouunEBg)
 

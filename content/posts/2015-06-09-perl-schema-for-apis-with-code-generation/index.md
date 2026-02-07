@@ -17,7 +17,7 @@ Two things have occurred lately for me in Perl:
 1. I've been bitten enough times by un(der)specified RPC and API documentation to make it worth my while to begin documenting the interfaces in schemas.
 2. I've been bitten by [Moose](http://moose.iinteractive.com/en/about.html). Using real objects instead of raw hashes.
 
-<!-- more -->It seems to me that the schema language of choice these days is [JSON schema](http://json-schema.org/). In both of Perl's implementations, JSON::Schema and JSV, they actually validate perl data structures, not JSON. Perfect!
+<!--more-->It seems to me that the schema language of choice these days is [JSON schema](http://json-schema.org/). In both of Perl's implementations, JSON::Schema and JSV, they actually validate perl data structures, not JSON. Perfect!
 
 So now all I need to do is find a library that generates Moose classes from JSON schema. ( [Nothing on Google](https://www.google.com/search?q=moose+json+schema) ) . Wouldn't it be great to have:
 

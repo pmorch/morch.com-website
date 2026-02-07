@@ -13,7 +13,7 @@ I've written [before](/2011/07/05/forwarding-snmp-ports-over-ssh-using-socat/) a
 
 ![](sshVPN1.png)
 
-<!-- more -->
+<!--more-->
 
 In the figure above, the Remote Server could be any TCP or UDP service in the remote network. My personal itch was to access SNMP agents in a remote network.
 

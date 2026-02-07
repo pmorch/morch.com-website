@@ -36,7 +36,7 @@ Notice how 10 comes before 2 in [asciibetical](http://weblog.masukomi.org/2007/1
 
 [Dave Koelle's Alphanum Algorithm](http://www.davekoelle.com/alphanum.html) sorts naturally, but instead of analyzing each array element O(log(N)) times, I [present a modified Perl version](https://github.com/pmorch/natsort) that allows for [Schwartzian transforms](http://en.wikipedia.org/wiki/Schwartzian_transform), yielding huge performance improvements.
 
-<!-- more -->
+<!--more-->
 
 
 # Improvements to Alphanum
