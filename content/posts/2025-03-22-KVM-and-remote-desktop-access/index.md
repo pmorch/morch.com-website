@@ -44,6 +44,22 @@ First of all, that means that the attached devices don't resize all the windows 
 
 I ain't never going back.
 
+## Update 2026: EDID emulation isn't magic — the monitor has to be awake
+
+I found a limit of how my **Samsung Odyssey Neo G7** interacts with the
+KC-KVM302AS's EDID emulation. The emulated EDID is *learned* from the monitor and
+held only while the KVM is powered — it isn't a fixed, always-present EDID. Great
+for the everyday case (monitor present but switched to the other machine). But
+after a **power outage**, where everything rebooted together — servers, monitor,
+KVM — **the monitor** came back in a soft-off state that serves no EDID; the KVM
+then had nothing to emulate, and with nothing to wake the monitor, my desktop
+booted with no display and stayed remotely inaccessible until I got home and woke
+the monitor.
+
+So EDID emulation solves the *switching* problem, not the
+*dark-monitor-after-an-outage* problem — worth knowing before relying on it for
+unattended remote access.
+
 ## Thanks to user `HJ_wu` on reddit
 
 I posted my problem on reddit: [Rustdesk client using Linux, xorg and a KVM switch : r/rustdesk](https://www.reddit.com/r/rustdesk/comments/1jeidxg/rustdesk_client_using_linux_xorg_and_a_kvm_switch/) and it was [HJ-wu's answer](https://www.reddit.com/r/rustdesk/comments/1jeidxg/comment/miklkfh/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button):

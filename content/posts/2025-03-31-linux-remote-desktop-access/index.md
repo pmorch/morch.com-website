@@ -13,11 +13,13 @@ support X11. Wayland is the only option from now on.
 
 Here I compare Gnome Remote Desktop, RustDesk and `x11vnc`.
 
-I ended up using Gnome Remote Desktop for "Desktop Saring", but not for "Remote
-Login" because it doesn't work without Network Manager, and I don't use Network
-Manager. Also, it doesn't allow logging into the physical desktop (see below).
+I ended up using Gnome Remote Desktop. I use "Desktop Sharing" for the physical
+desktop; and since switching to Network Manager, "Remote Login" works too — though
+it only gives a separate virtual desktop, not the physical one (see below).
 
-For "Remote Login", I'm using `ydotool` to send `<Enter>` and my password to login with GDM. Hacky, but it works.
+To log into the *physical* desktop remotely (so "Desktop Sharing" can then show
+it), I use `ydotool` to send `<Enter>` and my password to the GDM login screen.
+Hacky, but it works.
 
 ### Wayland disqualifies `x11vnc` and RustDesk
 
@@ -126,11 +128,12 @@ started, and "Remote Login" if it hasn't. The only problem is that if you forget
 to logout from the virtual desktop, you will not be able to login to the
 physical desktop while the virtual desktop is running. I could live with that.
 
-However, there seems to be a
+There's a
 [problem](https://discourse.gnome.org/t/can-i-run-gnome-remote-desktop-without-networkmanager/28116)
-getting "Remote Login" to work without Network Manager. And I don't use Network
-Manager, but have configured the network statically in NixOS, so for now, I need
-to either use Network Manager or not use "Remote Login".
+getting "Remote Login" to work without Network Manager: without it, the Remote
+Login RDP screen just comes up blank white. I used to configure the network
+statically in NixOS, but I've since switched to Network Manager — so "Remote
+Login" works now too.
 
 Gnome Remote Desktop is configured in Gnome Settings -> System -> Remote
 Desktop in two tabs:
