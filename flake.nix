@@ -12,6 +12,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
 
         # nixpkgs lags upstream; bump version + both hashes to upgrade.
+        # Keep in sync with HUGO_VERSION in cf-build.sh.
         hugo = pkgs.hugo.overrideAttrs (old: rec {
           version = "0.167.0";
           src = pkgs.fetchFromGitHub {
