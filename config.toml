@@ -1,7 +1,7 @@
 baseURL = "https://www.morch.com"
-languageCode = "en-us"
+locale = "en-us"
 title = "Peter V. Mørch's Blog"
 theme = "ananke"
 
-[params]
+[params.ananke]
     custom_css = ["css/style.css"]
