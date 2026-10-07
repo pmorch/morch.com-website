@@ -2,7 +2,7 @@
 title: "Hoisin Chicken"
 date: 2026-02-07T12:00:00+01:00
 tags: ["recipe"]
-featured_image: ""
+featured_image: "hoisin-chicken.webp"
 description: "A quick and easy oven-baked hoisin chicken with broccoli and cashews"
 ---
 
